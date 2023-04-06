@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Домашняя библиотека</h1>
+
+  <p>Добро пожаловать в <em>Домашнюю библиотеку</em> - мой первый веб-проект</p>
+
+<h2>Динамический контент</h2>
+
+  <p>База данных Библиотеки имеет следующее количество записей:</p>
+  <ul>
+    <li><strong>Книги:</strong> {{ num_books }}</li>
+    <li><strong>Экземпляры:</strong> {{ num_instances }}</li>
+    <li><strong>Доступные экземпляры:</strong> {{ num_instances_available }}</li>
+    <li><strong>Авторы:</strong> {{ num_authors }}</li>
+  </ul>
+
+  <p> Вы посещали эту страницу {{ num_visits }} {% if num_visits == 1 %} раз {% else %} раза {% endif %}.</p>
+
+{% endblock %}
